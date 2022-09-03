@@ -11,7 +11,6 @@ package com.gugawag.so.ipc;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Date;
 
 public class NomeClient {
 	public static void main(String[] args)  {
@@ -28,7 +27,7 @@ public class NomeClient {
 
 			PrintWriter pout = new PrintWriter(servidorSock.getOutputStream(), true);
 			// TODO Altere abaixo para enviar seu nome ao servidor
-			pout.println("SEU NOME AQUI");
+			pout.println("DIEGO FIGUEIREDO DE MEDEIROS");
 			servidorSock.close();
 		}
 		catch (IOException ioe) {

@@ -18,7 +18,8 @@ public class DateServer{
 		try {
 			ServerSocket sock = new ServerSocket(6013);
 
-			System.out.println("=== Servidor iniciado ===\n");
+			System.out.println("=== Servidor iniciado ===");
+			System.out.println("=== Diego Figueiredo de Medeiros ===\n");
 			// escutando por conexões
 			while (true) {
 				Socket client = sock.accept();
@@ -27,7 +28,7 @@ public class DateServer{
 				PrintWriter pout = new PrintWriter(client.getOutputStream(), true);
 
 				// Escreve a data atual no socket
-				pout.println(new Date().toString() + "-Boa noite alunos!");
+				pout.println(new Date() + " - Boa noite alunos!");
 
 				InputStream in = client.getInputStream();
 				BufferedReader bin = new BufferedReader(new InputStreamReader(in));
